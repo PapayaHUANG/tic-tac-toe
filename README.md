@@ -4,6 +4,10 @@
 
 ![效果图2](https://raw.githubusercontent.com/PapayaHUANG/images/main/img/20211012183140.png)
 
+## 在线演示
+
+https://www.shaoyahuang.cn/tic-tac-toe/
+
 ## 项目介绍
 
 用户和电脑轮流在九宫格画圈或者叉，谁方先连成横、竖、斜线即获胜。
