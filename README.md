@@ -18,5 +18,8 @@ When all 9 squares are full, the game is over. When all 9 squares are full and n
 
 ### Showcase
 
-![front page](https://raw.githubusercontent.com/PapayaHUANG/images/main/img/%E6%88%AA%E5%B1%8F2022-08-05%2021.12.02.png)
-![in the game](https://raw.githubusercontent.com/PapayaHUANG/images/main/img/%E6%88%AA%E5%B1%8F2022-08-05%2021.12.25.png)
+<img src='https://raw.githubusercontent.com/PapayaHUANG/images/main/img/%E6%88%AA%E5%B1%8F2022-08-05%2021.12.02.png' width ='300' height = '200' alt="front-page" align=center />
+
+<img src='https://raw.githubusercontent.com/PapayaHUANG/images/main/img/%E6%88%AA%E5%B1%8F2022-08-05%2021.12.25.png' width ='300' height = '200' alt="in-the-game" align=center />
+
+For live version please check [here](http://shaoyahuang.site/tic-tac-toe/)
