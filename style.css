@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,13 +7,14 @@
 }
 
 :root {
-  --cell-size: 120px;
+  --cell-size: 200px;
   --border-color: #665b58;
 }
+
 body {
   position: relative;
-  background: linear-gradient(#eb8d2f, #edddeb);
-  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: linear-gradient(#6db3a3, #edddeb);
+  font-family: 'Open Sans', sans-serif;
 }
 
 .board {
@@ -27,11 +30,35 @@ body {
   width: var(--cell-size);
   height: var(--cell-size);
   border: 5px solid var(--border-color);
-  text-align: center;
-  vertical-align: middle;
-  font-size: 70px;
   cursor: pointer;
   color: var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes highlight {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.cell img {
+  width: 50%;
+
+  animation: show 1.5s;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* remove border */
@@ -68,27 +95,44 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
+  animation: slideDown 1s;
 }
-.intro-text {
-  font-size: 30px;
+
+@keyframes slideDown {
+  from {
+    top: 20%;
+  }
+  to {
+    top: 50%;
+  }
+}
+
+.intro-text,
+.text {
+  font-size: 50px;
   text-align: center;
   color: blanchedalmond;
   padding-bottom: 30px;
 }
-.text {
-  font-size: 70px;
-  text-align: center;
-  color: blanchedalmond;
+.buttons {
+  display: flex;
+  width: 30%;
+  justify-content: space-around;
 }
-
 button {
   width: 100px;
-  font-size: 1.5rem;
+
   border-radius: 10px;
   background-color: var(--border-color);
   color: white;
 }
 
-#restartButton {
+button img {
   width: 40%;
+}
+
+#restartButton {
+  width: 30%;
+  height: 10%;
+  font-size: 30px;
 }
