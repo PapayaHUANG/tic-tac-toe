@@ -1,19 +1,22 @@
-# TIC TAC TOE GAME
+# A Unbeatable Tic Tac Toe Game with Minimax Algorithm
 
-![效果图1](https://raw.githubusercontent.com/PapayaHUANG/images/main/img/20211012183059.png)
+## Project Description
 
-![效果图2](https://raw.githubusercontent.com/PapayaHUANG/images/main/img/20211012183140.png)
+### Overview
 
-## 在线演示
+The game is played on a 3\*3 grid. You have to choose a sign between 'x' and 'o', and players(you and computer) take turns to mark empty squares.
+The first player to get 3 marks in a row(up, down, across or diagonally) is the winner.
+When all 9 squares are full, the game is over. When all 9 squares are full and no player achieve the 3 marks in a row, call it a tie game.
 
-https://www.shaoyahuang.cn/tic-tac-toe/
+### Technologies Used
 
-## 项目介绍
+1. Minimax Algorithm
+   It is a basic algorithm usually applied in zero-sum game theory. The key logic is to minimizing the possibility to lose.
+   The algorithm generates a tree data structure, and recursion is used in the structure to get the best result.
 
-用户和电脑轮流在九宫格画圈或者叉，谁方先连成横、竖、斜线即获胜。
+2. CSS animation
 
-## 项目使用技术
+### Showcase
 
-1. Grid 布局实现九宫格；
-2. minmax 算法实现计算机寻求步数最优解。
-3. CSS variable 增加代码的可复用性。
+![front page](https://raw.githubusercontent.com/PapayaHUANG/images/main/img/%E6%88%AA%E5%B1%8F2022-08-05%2021.12.02.png)
+![in the game](https://raw.githubusercontent.com/PapayaHUANG/images/main/img/%E6%88%AA%E5%B1%8F2022-08-05%2021.12.25.png)
