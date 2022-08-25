@@ -1,4 +1,5 @@
 //变量声明
+//testing
 let originBoard;
 let huPlayer;
 let aiPlayer;
