@@ -9,6 +9,8 @@
 :root {
   --cell-size: 200px;
   --border-color: #665b58;
+  --font-size: 50px;
+  --button-width: 100px;
 }
 
 body {
@@ -109,7 +111,7 @@ body {
 
 .intro-text,
 .text {
-  font-size: 50px;
+  font-size: var(--font-size);
   text-align: center;
   color: blanchedalmond;
   padding-bottom: 30px;
@@ -120,7 +122,7 @@ body {
   justify-content: space-around;
 }
 button {
-  width: 100px;
+  width: var(--button-width);
 
   border-radius: 10px;
   background-color: var(--border-color);
@@ -134,5 +136,29 @@ button img {
 #restartButton {
   width: 30%;
   height: 10%;
-  font-size: 30px;
+  font-size: calc(0.7 * var(--font-size));
+}
+
+@media screen and (max-width: 600px) {
+  :root {
+    --cell-size: 80px;
+    --font-size: 20px;
+    --button-width: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 600px) {
+  :root {
+    --cell-size: 150px;
+    --font-size: 40px;
+    --button-width: 75px;
+  }
+}
+
+@media screen and (max-width: 992px) and (min-width: 768px) {
+  :root {
+    --cell-size: 160px;
+    --font-size: 45px;
+    --button-width: 80px;
+  }
 }

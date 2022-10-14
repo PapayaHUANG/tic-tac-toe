@@ -66,9 +66,6 @@ function startGame() {
 
 //确认人点击的九宫格
 function turnClick(square) {
-  //square is equal to event in normal case;
-  // Here I pass argu to func turn.
-
   if (typeof originBoard[square.target.id] === 'number') {
     turn(square.target.id, huPlayer);
     if (!checkTie()) {
@@ -83,7 +80,6 @@ function turn(squareId, player) {
   newChild.src = player;
   document.getElementById([squareId]).appendChild(newChild);
 
-  //This syntax is for the sake of fuc checkWin.
   originBoard[squareId] = player;
   gameWon = checkWin(originBoard, player);
 
@@ -91,12 +87,11 @@ function turn(squareId, player) {
 }
 
 function checkWin(board, player) {
-  //To get the array of the moves player took
   let checkedSquare = board.reduce(
     (accum, curr, i) => (curr === player ? accum.concat(i) : accum),
     []
   );
-  //To check if the moves match every element in winCombos.
+
   let gameWon = null;
   for (let [index, win] of winCombos.entries()) {
     if (win.every((element) => checkedSquare.indexOf(element) > -1)) {
@@ -145,8 +140,10 @@ function checkTie() {
 }
 
 function minimax(newBoard, player) {
+  //检查空格并存储到数组
   let availSpots = emptySquares();
 
+  //确定static value
   if (checkWin(newBoard, huPlayer)) {
     return { score: -10 };
   }
@@ -157,6 +154,7 @@ function minimax(newBoard, player) {
   }
 
   let moves = [];
+  //通过递归调用minmax函数来绘制预测落子步骤并记录
   for (let spot of availSpots) {
     let move = {};
     move.index = newBoard[spot];
@@ -169,9 +167,12 @@ function minimax(newBoard, player) {
       let result = minimax(newBoard, aiPlayer);
       move.score = result.score;
     }
+    //将空位重置为空
     newBoard[spot] = move.index;
     moves.push(move);
   }
+
+  //根据static value来得出最优解
   let bestMove;
   if (player === aiPlayer) {
     let bestScore = -1000;
@@ -190,5 +191,6 @@ function minimax(newBoard, player) {
       }
     }
   }
+  //返回最优解
   return moves[bestMove];
 }
